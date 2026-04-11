@@ -43,6 +43,11 @@ Ambas facciones comparten el mismo sistema de niveles; solo difieren los nombres
 **Tropa de Comunicaciones (L1 especial)**: Porta radio de alcance global. Por si sola no
 extiende la cadena de mando. Cuando esta asignada a una escuadra con oficial L3/L4/L5,
 amplifica el radio de ese oficial (el alcance exacto esta pendiente de definicion).
+**Patron de uso**: Es la unica forma correcta de agregar capacidad de radio a una escuadra
+sin elevar su nivel de mando. Un HQ o escuadra especial que necesite comunicaciones debe
+incluir una Tropa de Comunicaciones L1 — nunca asignar radio a un miembro L2.
+
+> **Nota**: Los nombres de grado específicos de cada facción (tablas a continuación) son **provisorios** — no están cerrados. Los niveles L1–L5 y sus reglas de radio/autonomía sí son canónicos y permanentes. Los grados de cada facción pueden cambiar sin afectar la lógica del juego.
 
 ## Confederacion
 

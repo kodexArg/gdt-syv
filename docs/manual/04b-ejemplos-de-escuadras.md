@@ -40,6 +40,10 @@ El Grupo de Fuego concentra potencia de fuego directa; el Grupo Scout aporta cap
 
 <!-- Pendiente: efectos concretos del Grupo Scout en niebla de guerra -->
 
+#### Nota sobre Sanitarios
+
+Si la escuadra incluye un Sanitario (role especial, **Pendiente de definir** su nivel y lugar en la composición), este puede **estabilizar** soldados heridos durante el combate o entre turnos. Un Sanitario **no cura heridas** — es decir, no remueve los modificadores negativos acumulados. Su rol es **prevenir que empeoren**: mantiene a un soldado herido en su estado actual, evitando complicaciones que lo acercarían al umbral de eliminación. Este enfoque refuerza el tema de atrito: el daño es permanente, y la supervivencia depende de presión táctica sostenida, no de recuperación mágica.
+
 ### Bajas clave
 
 - **Muere el Sargento (L3):** La escuadra pierde su líder con radio. Si ningún otro miembro porta radio, `has_radio` pasa a `false`. La escuadra puede dejar de actuar como relay. Los L2 no asumen el mando operativo por sí solos.
@@ -68,9 +72,9 @@ Una escuadra pequeña, especializada, que opera como pieza de apoyo de fuego. No
 
 ### Mecánica en juego
 
-El mortero es una pieza que requiere al menos dos artilleros para operar. La escuadra ocupa un hex y no suele avanzar al frente: se posiciona en la retaguardia y aporta fuego de área.
+El mortero es una pieza que requiere al menos dos artilleros para operar. La escuadra ocupa un hex y no suele avanzar al frente: se posiciona en la retaguardia y aporta fuego indirecto.
 
-<!-- Pendiente: reglas especiales de fuego indirecto para MORTARS — rango, área de efecto, diferencia con combate directo -->
+**Fuego indirecto:** El mortero dispara a **coordenadas de hexes**, sin necesidad de línea de vista. El oficial de escuadra designa el hex objetivo (por coordenadas) durante la fase Orders, y el mortero impacta en ese hex específico durante la Resolution. El proyectil afecta **solo al hex objetivo** — no hay daño de área ni "splash" a hexes adyacentes. Todas las unidades en el hex impactado se ven afectadas; el resto no.
 
 El Sargento porta la radio y mantiene la escuadra en la cadena de mando. Sin él, la escuadra pierde radio inmediatamente: son 3 tropas L1 sin ningún portador.
 

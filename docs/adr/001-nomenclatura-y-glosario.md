@@ -38,8 +38,12 @@ Se adopta la siguiente terminologia como vocabulario canonico del proyecto. Todo
 
 | **E-UHF** | Variante encriptada de UHF usada por ambas facciones para comunicacion tactica. Alcance 500 m (5 hex). Solo L3 a L5 la portan. Ver manual de Comunicaciones. |
 | **Fin de los Secretos** | Evento historico del universo SyV que volvio irreversible la transparencia de las comunicaciones. Razon por la que L1/L2 no portan radio personal. |
+| **Confederación Argentina** | Facción norte. Ejército regular del estado teocrático-militar. Estructura jerárquica formal heredada del Ejército Argentino con presencia eclesiástica integrada en la cadena de mando. Nombre corto de juego: "La Confederación". ID en código y YAML: `confederacion`. |
+| **Los Rojos** | Facción sur. Movimiento de resistencia de raíz comunista-patriótica con estructura más horizontal. Incluye el cuerpo especial "Los Infernales" — caballería irregular con nomenclatura gaucha. ID en código y YAML: `rojos`. |
 
 Los grados militares especificos de cada faccion (rangos de Confederacion y Los Rojos) se documentan en ADR-001-01.
+
+> Las facciones actuales son Confederación Argentina y Los Rojos. El sistema de niveles L1–L5 es agnóstico respecto a la facción — cualquier nueva facción puede incorporarse definiendo sus propios nombres de rango sobre los mismos niveles. Ver `docs/premade-squads/_template.yaml` para el esquema de escuadras.
 
 ## Consecuencias
 

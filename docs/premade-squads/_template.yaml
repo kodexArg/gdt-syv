@@ -1,18 +1,46 @@
-# Template de escuadra premade
-# Cada archivo define una escuadra lista para usar.
-# El jugador compone su sección eligiendo escuadras dentro de un presupuesto.
+# Template de escuadra premade — Subordinación y Valor
+# Copiar este archivo como base para cualquier nueva escuadra.
+# El sistema soporta facciones infinitas: faction y rank son strings libres.
+#
+# Campos marcados (!) son obligatorios.
+# Campos marcados (?) son opcionales — omitir si no aplican.
+# Regla de radio: level >= 3 → radio implícita. level <= 2 → sin radio.
+# Excepción única: Tropa de Comunicaciones (L1 especial) sí porta radio global.
 
 squad:
-  id: ""
-  name: ""
-  type: ""                  # infantry | recon | mortars | engineers | command
-  faction: ""               # confederacion | rojos
-  cost: 0                   # puntos totales de esta composición
+  id: ""              # (!) ID único: "{faction}-{type}-{variante}"
+  name: ""            # (!) Nombre de display de la escuadra
+  faction: ""         # (!) ID de facción — string libre, ej: "confederacion", "rojos", cualquier futura facción
+  type: ""            # (!) Tipo: infantry | recon | mortars | engineers | command | cavalry | <extensible>
+  squad_level: 1      # (!) Nivel L del líder de la escuadra (integer 1–5)
+  special_rules: false  # (?) true si tiene mecánicas especiales de tipo/facción (default: false)
+  cost: 0             # (!) Costo total en puntos de la escuadra
 
-  members:
-    - rank: ""              # teniente_primero | sargento_primero | sargento | cabo_primero | cabo | soldado | capellan | monsenor
-      role: ""              # L1 | L2 | L3 | L4
-      function: ""          # descripción libre de su función
-      cost: 0
-      required: true        # solo se explicita cuando es true
-      has_radio: true        # solo se explicita cuando es true — si ningún miembro tiene radio, la escuadra entra en disband
+  leader:             # (!) El miembro de mayor rango en la escuadra
+    rank: ""          # (!) Nombre de rango de la facción — string libre
+    level: 1          # (!) Nivel L (integer 1–5) — debe coincidir con squad_level
+    function: ""      # (!) Descripción de su rol
+    has_radio: true   # (?) Incluir si level >= 3 (explícito por claridad) o si es Comunicaciones L1
+
+  groups:             # (?) Sub-grupos internos. Usar [] si no hay grupos.
+    - name: ""        # (!) Nombre del grupo
+      leader:         # (?) Líder del grupo (típicamente L2) — omitir si el grupo no tiene líder propio
+        rank: ""
+        level: 2
+        function: ""
+        # NO incluir has_radio en L2 — viola las reglas del juego
+      members:        # (!) Miembros del grupo
+        - rank: ""    # (!) Nombre de rango de la facción
+          level: 1    # (!) Nivel L
+          function: ""  # (!) Rol
+          count: 1    # (?) Cantidad de miembros idénticos — omitir si es 1 (default)
+          compatible_squads: []  # (?) Restringir a escuadras específicas — omitir si sin restricción
+          has_radio: true  # (?) SOLO para Comunicaciones L1 — nunca para L2
+
+  direct_members:     # (?) Miembros fuera de grupos. Usar [] si no hay.
+    - rank: ""
+      level: 1
+      function: ""
+      count: 1        # (?) Omitir si es 1
+      compatible_squads: []  # (?) Omitir si sin restricción
+      has_radio: true  # (?) SOLO para Comunicaciones L1 o L3+ cuando es explícito

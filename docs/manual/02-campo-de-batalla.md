@@ -7,6 +7,21 @@ lang: es
 
 # El Campo de Batalla
 
+## Mapas: Escenarios predefinidos
+
+Cada partida utiliza un **escenario previamente diseñado**. No hay generación procedural de mapas ni editor de mapas (por ahora).
+
+El escenario define:
+- Diseño del tablero: distribución de terreno, agua, elevación
+- Hexes objetivos y sus puntos de victoria
+- Zonas de despliegue por facción
+- Límite de turnos para la partida
+- Presupuesto de puntos de despliegue por facción
+
+**Implicación táctica:** Toda la balance del juego es manual. Cada mapa se ajusta a mano para garantizar que ambas facciones tengan oportunidades simétricas de victoria según sus fuerzas.
+
+**Formato de escenario:** Pendiente de definir (estructura, serialización, validación)
+
 ## La grilla hexagonal
 
 El campo de batalla es una grilla de hexágonos con orientación flat-top y radio 20, lo que produce 1.261 casillas. Cada hexágono tiene seis vecinos y dos propiedades: un tipo de terreno y un nivel de elevación.
@@ -22,11 +37,11 @@ Cada hex tiene un tipo de terreno que define si es transitable y cómo afecta a 
 | **Pasto** | Sí | Sin modificadores. Terreno estándar. |
 | **Agua** | No | Intransitable. Bloquea movimiento. |
 
-Cada tipo de terreno es una definición independiente con sus propias reglas de movimiento, visión y combate. Nuevos terrenos — bosque, urbano, rocoso, trinchera — se incorporan como definiciones adicionales sin modificar los existentes.
+El sistema de terreno está diseñado como **abierto y extensible**: cada tipo de terreno define independientemente sus reglas de movimiento, visión y combate. Nuevos tipos de terreno se incorporan como definiciones adicionales sin modificar los existentes. En fases futuras, el catálogo podrá expandirse, pero los tipos y efectos específicos se definirán en su momento.
 
 ## Elevación
 
-Cada hex tiene un valor de elevación expresado como float. La elevación puede ser positiva o negativa, y sus efectos en visión, combate y movimiento se definirán conforme el sistema de terreno se expanda. En esta etapa, todos los hexes tienen elevación `0.0`.
+Cada hex tiene un valor de elevación expresado como float. La elevación afecta tanto a la **visión** como al **combate**: el terreno elevado ve más allá (menos bloqueos de línea de visión) y proporciona ventaja táctica en el combate. Sin embargo, en la fase de prototipo, **todos los hexes tienen elevación `0.0`** — este es un sistema futuro que se implementará conforme el juego evolucione.
 
 ## Lo que ves en pantalla
 

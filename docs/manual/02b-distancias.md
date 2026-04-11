@@ -28,13 +28,9 @@ aproximadamente **2 km de radio** (4 km de extremo a extremo).
 
 ## Ocupación de hexes
 
-Una escuadra ocupa exactamente un hex. En condiciones normales, **un hex contiene una sola
-escuadra por bando**. Dos escuadras enemigas pueden acceder al mismo hex —
-los 100 metros son espacio suficiente para que eso ocurra — y en ese caso se aplican
-las reglas de combate en el mismo hex.
+Una escuadra ocupa exactamente un hex. En condiciones normales, **un hex contiene una sola escuadra por bando**. Dos escuadras enemigas pueden acceder al mismo hex — los 100 metros son espacio suficiente para que eso ocurra — y en ese caso se aplican las reglas de combate en el mismo hex.
 
-> El *stack* de múltiples escuadras propias en el mismo hex está pendiente de definición.
-> Por ahora no se limita explícitamente, pero tampoco se asume como regla normal.
+**Stacking ilimitado (propias):** No hay límite en la cantidad de escuadras propias que pueden ocupar el mismo hex. El tablero es lo suficientemente grande (radio 20, 1.261 hexes) para que la concentración táctica no genere problemas operacionales. Esto simplifica las reglas y permite a los jugadores usar agrupaciones defensivas o concentraciones de fuego sin restricciones de espacio.
 
 ## Distancias de combate
 

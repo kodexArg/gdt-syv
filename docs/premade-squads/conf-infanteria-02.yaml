@@ -1,51 +1,39 @@
 squad:
   id: "conf-infanteria-02"
   name: "Escuadra de Fuego Belgrano"
-  type: infantry
   faction: confederacion
+  type: infantry
+  squad_level: 3
+  special_rules: false
   cost: 100
 
-  members:
-    - rank: sargento
-      role: L3
-      function: "Mando de escuadra"
-      cost: 18
-      required: true
-      has_radio: true
+  leader:
+    rank: "Sargento"
+    level: 3
+    function: "Mando de escuadra"
+    has_radio: true
 
-    - rank: cabo
-      role: L2
-      function: "Radio de escuadra, retaguardia"
-      cost: 14
-      required: true
-      has_radio: true
+  groups: []
 
-    - rank: cabo_primero
-      role: L2
+  direct_members:
+    - rank: "Cabo"
+      level: 2
+      function: "Segundo al mando, retaguardia de escuadra"
+    - rank: "Cabo Primero"
+      level: 2
       function: "Artillero superior, coordinación de fuego"
-      cost: 20
-
-    - rank: soldado
-      role: L1
+    - rank: "Soldado"
+      level: 1
       function: "Supresión, ametralladora"
-      cost: 13
-
-    - rank: soldado
-      role: L1
+    - rank: "Soldado"
+      level: 1
       function: "Asistente de ametralladora, munición"
-      cost: 8
-
-    - rank: soldado
-      role: L1
+    - rank: "Soldado"
+      level: 1
       function: "Combate directo"
-      cost: 9
-
-    - rank: soldado
-      role: L1
+    - rank: "Soldado"
+      level: 1
       function: "Combate directo"
-      cost: 9
-
-    - rank: capellan
-      role: L1
+    - rank: "Capellan"
+      level: 1
       function: "Sanidad y moral"
-      cost: 9

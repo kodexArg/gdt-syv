@@ -37,7 +37,7 @@ Fuerzas del sur. Resistencia bien pertrechada con estructura más horizontal y r
 | HQ | Líder Revolucionario | Comandante Rojo (el jugador) |
 | HQ | Oficial de Comunicaciones | Gestión de radio y cadena de mando del HQ |
 | L5 | Teniente | Jefe de pelotón |
-| L4 | Subteniente | Subjefe de pelotón |
+| L4 | Sargento de Primera | Subjefe de pelotón |
 | L3 | Sargento | Jefe de escuadra |
 | L2 | Basto (Cabo Primero) | Segundo al mando de escuadra, comunicaciones |
 | L2 | Cabo | Especialista / tercero al mando |
@@ -51,10 +51,19 @@ Cuerpo especial: "Los Infernales" — caballería ligera en motos eléctricas to
 
 ## Diferencias entre facciones
 
-<!-- Las facciones son mecánicamente simétricas o asimétricas?
-     La Confederación tiene capellanes y estructura rígida.
-     Los Rojos tienen estructura plana con mecánica especial pendiente.
-     Definir si hay diferencias en stats, habilidades, o solo en composición. -->
+**Las facciones son mecánicamente simétricas.** Ambas usan las mismas reglas, fórmulas de estadísticas y mecánicas de combate. La asimetría existe **solo en composición**: los tipos y cantidad de escuadras disponibles varían por facción.
+
+**Ejemplos de asimetría de composición:**
+- Solo Los Rojos tienen Los Infernales (caballería en motos eléctricas)
+- Solo La Confederación tiene Capellanes integrados en la cadena de mando
+- Cada facción puede tener acceso a diferentes tipos de escuadras especiales o estructuras
+
+**No hay:**
+- Diferencias en fórmulas de daño, defensa o movimiento
+- Bonificadores o penalizadores inherentes por facción
+- Rasgos mecánicos exclusivos (las habilidades especiales se derivan de la estructura, no de la afiliación)
+
+Esta decisión deliberada asegura balance mediante **variedad compositiva**, no mediante excepciones mecánicas. Equilibrar una sola ruleset es más simple y mantenible que gestionar diferentes reglas por facción.
 
 ## Presentación en pantalla
 

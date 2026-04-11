@@ -20,9 +20,9 @@ squad:
       level: 4
       function: "Subjefe de Pelotón, enlace con escuadras"
       has_radio: true
-    - rank: "Cabo"
-      level: 2
-      function: "Operador de radio, comunicaciones"
+    - rank: "Comunicaciones"
+      level: 1
+      function: "Operador de radio, comunicaciones de largo alcance"
       has_radio: true
     - rank: "Soldado"
       level: 1

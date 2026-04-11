@@ -1,50 +1,25 @@
 squad:
   id: "rojos-infanteria-01"
   name: "Escuadra Roja"
-  type: infantry
   faction: rojos
+  type: infantry
+  squad_level: 3
+  special_rules: false
   cost: 100
 
-  members:
-    - rank: sargento
-      role: L3
-      function: "Mando de escuadra"
-      cost: 16
-      required: true
+  leader:
+    rank: "Sargento"
+    level: 3
+    function: "Mando de escuadra"
+    has_radio: true
 
-    - rank: basto
-      role: L2
-      function: "Segundo al mando, comunicaciones"
-      cost: 14
-      required: true
-      has_radio: true
+  groups: []
 
-    - rank: soldado
-      role: L1
+  direct_members:
+    - rank: "Basto"
+      level: 2
+      function: "Segundo al mando, coordinación de escuadra"
+    - rank: "Soldado"
+      level: 1
       function: "Combate directo"
-      cost: 12
-
-    - rank: soldado
-      role: L1
-      function: "Combate directo"
-      cost: 12
-
-    - rank: soldado
-      role: L1
-      function: "Combate directo"
-      cost: 12
-
-    - rank: soldado
-      role: L1
-      function: "Combate directo"
-      cost: 12
-
-    - rank: soldado
-      role: L1
-      function: "Combate directo"
-      cost: 11
-
-    - rank: soldado
-      role: L1
-      function: "Combate directo"
-      cost: 11
+      count: 6

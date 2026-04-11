@@ -43,11 +43,11 @@ El jugador no asigna explícitamente roles de relay: la topología se calcula au
 
 Las tropas L3, L4 y L5 portan radio. Esto es lo que les permite mantenerse en la cadena de mando y actuar como relay.
 
-Una escuadra tiene radio (`has_radio = true`) mientras al menos una de sus tropas portadoras esté viva. Si todas las tropas con radio en una escuadra mueren, la escuadra **pierde su radio**.
+Una escuadra tiene radio (`has_radio = true`) mientras al menos una de sus tropas portadoras esté viva. **Si la tropa L3 (líder de escuadra) muere, la escuadra pierde la radio**, incluso si hay otras tropas L4 o L5 disponibles. El verdadero valor de la radio no está en la electrónica, sino en el entrenamiento del líder para usarla. Sin el L3, la escuadra está **efectivamente aislada**.
 
-Una escuadra sin radio no puede actuar como relay. Además, si ya no cuenta con radio propia para comunicarse con el HQ, entra en situación de disband.
+Una escuadra sin radio no puede actuar como relay. Además, no puede recibir nuevas órdenes del HQ durante el resto de la partida. La escuadra continúa existiendo y combatiendo, pero opera de forma aislada, ejecutando solo su última orden conocida o comportamiento defensivo por defecto.
 
-<!-- Pendiente: efecto mecánico exacto del disband — ¿la escuadra actúa sola? ¿se detiene? ¿intenta reagruparse? -->
+**Reestablecimiento de contacto por radio:** Pendiente de definir (posibles mecanismos: proximidad con otra unidad que tenga radio, asignación de un Oficial Criptógrafo que retransmita).
 
 ## La Tropa de Comunicaciones
 

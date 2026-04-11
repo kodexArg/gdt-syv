@@ -37,6 +37,56 @@ Cada tropa puede cargar uno o varios ítems de equipamiento. La relación es 1-a
 
 <!-- Pendiente: schema completo de Equipment — tipos, efectos en combate, encimamiento de ítems -->
 
+#### Atributos y estadísticas (Stats)
+
+**Plantilla de clase:** Todos los soldados de la misma clase comienzan con estadísticas base idénticas heredadas de una plantilla de clase. Por ejemplo, todos los Soldados de Infantería L1 arrancan con los mismos valores base de Ataque, Defensa, Movimiento, etc.
+
+**Sistema de modificadores:** Sobre esa base, cada soldado puede llevar modificadores abiertos que alteran sus stats: Perks (bonificadores), Traits (características innatas), Phobias (penalizadores), y **Heridas** (penalizadores permanentes adquiridos en combate). Cada soldado tiene una relación 1-a-varios con estos modificadores. De este modo, los soldados arrancan iguales por clase pero pueden divergir según los modificadores asignados.
+
+Las **Heridas** son un tipo especial de modificador: no se asignan al inicio, sino que se adquieren durante el combate como resultado del daño. Cada herida es un penalizador negativo que persiste para toda la partida. Un soldado es eliminado cuando la acumulación total de penalizadores de heridas cruza un umbral: **Pendiente de definir**. Para más detalle sobre el sistema de heridas, ver [Combate — Heridas y degradación del soldado](07-combate.md#heridas-y-degradación-del-soldado).
+
+Nombres de stats específicos: **Pendiente de definir**.
+Catálogo de Perks, Traits, Phobias: **Pendiente de definir**.
+
+#### Asignación aleatoria e invisibilidad de modificadores
+
+Este es uno de los elementos de diseño más distintivos de SyV: **el jugador no sabe qué Perks, Traits ni Phobias tienen sus soldados al comenzar la partida.**
+
+Al crear una escuadra durante la composición de fuerzas, cada tropa recibe modificadores asignados aleatoriamente desde el pool posible de su plantilla de clase. La asignación ocurre en el servidor en el momento de la creación y nunca se comunica directamente al cliente. El jugador ve los nombres y niveles de sus soldados, su equipamiento, y sus stats base de clase — pero los modificadores permanecen ocultos.
+
+**Mecánica de descubrimiento:** Los modificadores se revelan durante la partida cuando se vuelven evidentes por el comportamiento del soldado.
+
+- Un soldado con un Perk de puntería excepcional solo se revela cuando conecta un disparo improbable.
+- Un soldado con una Fobia a la artillería solo se revela cuando cae un proyectil cerca y reacciona de forma adversa.
+- Un soldado con un Trait de resistencia excepcional se revela cuando sobrevive un impacto que hubiera eliminado a otro.
+
+Cuando un modificador se activa por primera vez, el cliente recibe una notificación del evento y el modificador queda visible en la ficha del soldado desde ese momento. Antes de su primera activación, no aparece.
+
+Esta mecánica refuerza la filosofía de niebla de guerra del juego: **el jugador no conoce completamente ni siquiera sus propias fuerzas.** Comandar bien significa aprender sobre tus tropas comandándolas, no leyendo sus fichas antes del primer turno.
+
+<!-- Pendiente: qué campos exactos se revelan al cliente en el evento de activación; formato del mensaje de descubrimiento -->
+
+#### Mutación de modificadores durante la partida
+
+Los modificadores no son completamente estáticos. Un soldado puede ganar o perder un Perk, Trait o Phobia como consecuencia de un evento significativo durante el combate.
+
+- Un soldado que sobrevive un combate especialmente brutal podría adquirir un nuevo Trait.
+- Un soldado que presenció algo traumático podría desarrollar una Phobia que no tenía.
+- Un soldado que supera repetidamente una situación que antes lo paralizaba podría perder esa Phobia.
+- Un soldado que acumula demasiados fracasos podría perder la confianza reflejada en un Perk previo.
+
+**Esta mutación ocurre con frecuencia muy baja.** La mayoría de los soldados conservan sus modificadores iniciales durante toda la partida. No es un sistema de progresión por uso — es un reflejo de eventos extraordinarios que transforman a un individuo.
+
+Eventos disparadores específicos y probabilidades: **Pendiente de definir**.
+
+#### Progresión entre partidas
+
+*Futuro — no prioridad en prototipo.*
+
+En modo campaña, los soldados sobrevivientes podrían acumular experiencia entre partidas: ganar nuevos Perks, perder Phobias superadas, o modificar sus stats base según su historial de combate. La arquitectura de modificadores está diseñada para soportarlo — agregar un modificador de campaña es una operación del mismo tipo que asignar uno al inicio de partida.
+
+Esta funcionalidad no se implementa en el prototipo. El sistema de modificadores debe diseñarse con este uso futuro en mente, pero no debe construirse ni exponerse en la interfaz hasta que el modo campaña sea una prioridad.
+
 ### Grupo
 
 Agrupación organizacional interna de una Escuadra. No ocupa hex propio; forma parte de su escuadra y siempre se mueve con ella.
@@ -88,15 +138,17 @@ Ejemplos de escuadras especiales: Los Infernales (caballería), commandos, zapad
 
 ## Niveles L1–L5
 
-El sistema de niveles define la autoridad, el radio y la autonomía de cada tropa. No es un "tipo" fijo sino una propiedad que determina qué puede hacer y qué le pasa cuando queda sin mando.
+El sistema de niveles define la **autoridad, el radio y la autonomía** de cada tropa. **No determina la potencia de combate.** Un L1 es tan capaz de infligir daño como cualquier otro soldado; la diferencia es que no puede tomar decisiones autónomas en ausencia de mando superior.
 
-| Nivel | Descripción | Radio | Autonomía |
-|-------|-------------|-------|-----------|
-| **L5** | Teniente — mando de pelotón | Sí (5 hex) | Alta — recibe órdenes genéricas del HQ |
-| **L4** | Sargento Primero — subjefe de pelotón | Sí (5 hex) | Alta |
-| **L3** | Sargento — jefe de escuadra estándar | Sí (5 hex) | Media — lidera la escuadra operativamente |
-| **L2** | Cabo / sub-líder de grupo o líder de escuadra especial | No | Limitada (ver nota) |
-| **L1** | Soldado — tropa básica | No | Ninguna — se desbanda sin mando superior |
+| Nivel | Descripción | Radio | Autonomía | Poder de combate |
+|-------|-------------|-------|-----------|------------------|
+| **L5** | Teniente — mando de pelotón | Sí (5 hex) | Alta — recibe órdenes genéricas del HQ | Depende de sus stats, equipo y modificadores |
+| **L4** | Sargento Primero — subjefe de pelotón | Sí (5 hex) | Alta | Depende de sus stats, equipo y modificadores |
+| **L3** | Sargento — jefe de escuadra estándar | Sí (5 hex) | Media — lidera la escuadra operativamente | Depende de sus stats, equipo y modificadores |
+| **L2** | Cabo / sub-líder de grupo o líder de escuadra especial | No | Limitada (ver nota) | Depende de sus stats, equipo y modificadores |
+| **L1** | Soldado — tropa básica | No | Ninguna — se desbanda sin mando superior | Depende de sus stats, equipo y modificadores |
+
+**Nota importante:** El nivel L1–L5 define autoridad y radio, no capacidad de combate. Un L1 puede tener excelentes stats y modificadores, mientras que un L5 podría tener stats bajos o penalizadores.
 
 **Nota sobre L2:** El nivel L2 tiene dos usos distintos. Dentro de una escuadra estándar, el L2 es el sub-líder de un Grupo: organiza 2–5 tropas internamente pero no porta radio y depende del L3. Como líder de una escuadra especial, el L2 manda a toda la escuadra: opera sin radio, recibe órdenes genéricas y puede activar reglas especiales de su tipo.
 
@@ -118,16 +170,23 @@ Esto también significa que perder al líder L3 o a los L2 tiene más impacto qu
 
 ## Estados de la escuadra
 
-| Estado | Descripción |
-|--------|-------------|
-| **ACTIVE** | Operativa. Ejecuta órdenes normalmente. |
-| **ROUTED** | <!-- Pendiente: qué causa este estado, qué puede hacer la escuadra --> |
-| **RETREAT** | <!-- Pendiente: qué causa este estado, qué puede hacer la escuadra --> |
-| **ELIMINATED** | Removida del juego. |
+Los estados están **impulsados por el Valor ponderado de la escuadra** (promedio de Valor individual de todos los miembros). Ver [Valor — Transiciones de Estado](09-valor.md#transiciones-de-estado-por-valor-de-escuadra) para el modelo completo.
 
-Transición general: `ACTIVE → ROUTED → RETREAT → ELIMINATED`
+| Estado | Descripción | Órdenes permitidas | Causa |
+|--------|-------------|-------------------|-------|
+| **ACTIVE** | Operativa, rendimiento normal. | MOVE, DEFEND, ATTACK | Valor > umbral RETREAT |
+| **RETREAT** | Retirarse controladamente. Sub-rendimiento. | MOVE (hacia retaguardia), DEFEND | Valor ≤ umbral RETREAT, pero > umbral ROUTED |
+| **ROUTED** | Pérdida de cohesión, movimiento automático hacia retaguardia. Incontrolable. | Ninguna (ignora órdenes). Movimiento automático. | Valor ≤ umbral ROUTED |
+| **ELIMINATED** | Removida del juego. | N/A | Todos los miembros muertos. |
 
-<!-- Pendiente: qué causa cada transición, si son reversibles, relación con tiradas de Valor -->
+### Transición y reversibilidad
+
+- **Degradación:** ACTIVE → RETREAT → ROUTED (cuando Valor cae)
+- **Recuperación:** ROUTED → RETREAT → ACTIVE (cuando Valor sube durante períodos de seguridad)
+- Los estados son **reversibles**: una escuadra ROUTED puede recuperarse gradualmente si pasa tiempo sin amenaza inmediata
+- Ver [Valor — Recuperación de ROUTED](09-valor.md#progresión-y-recuperación) para detalles de mecánica
+
+**Nota:** Los estados de escuadra (ACTIVE, ROUTED, RETREAT) son distintos del sistema de heridas individual. Una escuadra puede estar en estado ACTIVE pero tener soldados individuales con heridas acumuladas que degradan su capacidad de combate gradualmente. El daño individual es persistente — las heridas del soldado no se limpian ni se recuperan durante la partida. Un Sanitario puede estabilizar a un soldado herido para evitar que empeore, pero el daño ya infligido permanece.
 
 ## Despliegue
 
