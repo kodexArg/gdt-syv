@@ -1,0 +1,35 @@
+squad:
+  id: "conf-hq-peloton"
+  name: "Mando de Pelotón Saavedra"
+  type: command
+  faction: confederacion
+  squad_level: 5
+  special_rules: false
+  cost: 110
+
+  leader:
+    rank: "Teniente"
+    level: 5
+    function: "Mando de Pelotón, coordinación general"
+    has_radio: true
+
+  groups: []
+
+  direct_members:
+    - rank: "Sargento Primero"
+      level: 4
+      function: "Subjefe de Pelotón, enlace con escuadras"
+      has_radio: true
+    - rank: "Cabo"
+      level: 2
+      function: "Operador de radio, comunicaciones"
+      has_radio: true
+    - rank: "Soldado"
+      level: 1
+      function: "Ordenanza, custodia del mando"
+    - rank: "Soldado"
+      level: 1
+      function: "Ordenanza, custodia del mando"
+    - rank: "Soldado"
+      level: 1
+      function: "Ordenanza, custodia del mando"

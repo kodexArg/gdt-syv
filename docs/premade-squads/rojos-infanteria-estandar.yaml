@@ -1,0 +1,52 @@
+squad:
+  id: "rojos-infanteria-estandar"
+  name: "Escuadra de Asalto Camilo Cienfuegos"
+  type: infantry
+  faction: rojos
+  squad_level: 3
+  special_rules: false
+  cost: 195
+
+  leader:
+    rank: "Sargento de Segunda"
+    level: 3
+    function: "Jefe de Escuadra"
+    has_radio: true
+
+  groups:
+    - name: "Grupo de Fuego"
+      leader:
+        rank: "Sargento de Tercera"
+        level: 2
+        function: "Subjefe de escuadra, líder del asalto"
+      members:
+        - rank: "Cabo"
+          level: 2
+          function: "Jefe de Fuego, ametralladora"
+        - rank: "Soldado"
+          level: 1
+          function: "Apuntador de ametralladora"
+          cantidad: 1
+        - rank: "Soldado"
+          level: 1
+          function: "Fusilero de asalto"
+          cantidad: 5
+
+    - name: "Grupo de Exploración"
+      leader:
+        rank: "Sargento de Tercera"
+        level: 2
+        function: "Jefe de exploradores, reconocimiento táctico"
+      members:
+        - rank: "Soldado"
+          level: 1
+          function: "Tirador de precisión"
+        - rank: "Soldado"
+          level: 1
+          function: "Observador avanzado"
+        - rank: "Soldado"
+          level: 1
+          function: "Fusilero de cobertura"
+          cantidad: 2
+
+  direct_members: []

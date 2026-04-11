@@ -1,0 +1,35 @@
+squad:
+  id: "conf-artilleros-01"
+  name: "Artilleros Saavedra"
+  type: mortars
+  faction: confederacion
+  cost: 100
+
+  members:
+    - rank: sargento
+      role: L3
+      function: "Jefe de pieza, cálculo de tiro, corrección"
+      cost: 25
+      required: true
+      has_radio: true
+
+    - rank: cabo
+      role: L2
+      function: "Apuntador, opera la mira"
+      cost: 22
+      required: true
+
+    - rank: soldado
+      role: L1
+      function: "Cargador, introduce proyectil"
+      cost: 18
+
+    - rank: soldado
+      role: L1
+      function: "Municionero, prepara y alcanza proyectiles"
+      cost: 18
+
+    - rank: soldado
+      role: L1
+      function: "Municionero, transporte y seguridad"
+      cost: 17

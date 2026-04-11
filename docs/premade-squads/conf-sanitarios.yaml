@@ -1,0 +1,29 @@
+squad:
+  id: "conf-sanitarios"
+  name: "Sección Sanitaria Pueyrredón"
+  type: infantry
+  faction: confederacion
+  squad_level: 2
+  special_rules: true
+  cost: 85
+
+  leader:
+    rank: "Cabo"
+    level: 2
+    function: "Médico jefe, triage y coordinación sanitaria"
+
+  groups: []
+
+  direct_members:
+    - rank: "Médico"
+      level: 1
+      function: "Médico de campaña, evacuación de heridos"
+    - rank: "Médico"
+      level: 1
+      function: "Médico de campaña, cirugía de urgencia"
+    - rank: "Médico"
+      level: 1
+      function: "Médico de campaña, soporte vital"
+    - rank: "Capellán"
+      level: 1
+      function: "Asistencia espiritual y moral, auxilio"

@@ -1,0 +1,52 @@
+squad:
+  id: "conf-infanteria-estandar"
+  name: "Escuadra de Asalto San Martín"
+  type: infantry
+  faction: confederacion
+  squad_level: 3
+  special_rules: false
+  cost: 200
+
+  leader:
+    rank: "Sargento"
+    level: 3
+    function: "Jefe de Escuadra"
+    has_radio: true
+
+  groups:
+    - name: "Grupo de Fuego"
+      leader:
+        rank: "Cabo Primero"
+        level: 2
+        function: "Subjefe de Infantería, líder del asalto"
+      members:
+        - rank: "Cabo"
+          level: 2
+          function: "Jefe de Fuego, ametralladora MAG"
+        - rank: "Soldado"
+          level: 1
+          function: "Apuntador MAG"
+          cantidad: 1
+        - rank: "Soldado"
+          level: 1
+          function: "Fusilero de asalto"
+          cantidad: 5
+
+    - name: "Grupo Scout"
+      leader:
+        rank: "Cabo Primero"
+        level: 2
+        function: "Subjefe Especialista, líder equipo Scout"
+      members:
+        - rank: "Soldado"
+          level: 1
+          function: "Tirador Sniper"
+        - rank: "Soldado"
+          level: 1
+          function: "Observador"
+        - rank: "Soldado"
+          level: 1
+          function: "Fusilero de protección"
+          cantidad: 2
+
+  direct_members: []

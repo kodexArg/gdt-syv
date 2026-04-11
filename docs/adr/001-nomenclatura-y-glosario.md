@@ -29,6 +29,17 @@ Se adopta la siguiente terminologia como vocabulario canonico del proyecto. Todo
 | **server** | Division del codigo para la escena headless, validacion de ordenes y resolucion de turnos |
 | **protocol** | Division del codigo que define los mensajes y RPCs entre client y server |
 | **Listen server** | Modelo de prototipado donde una unica instancia de Godot actua como servidor y cliente simultaneamente |
+| **Seccion** | Fuerza completa de un jugador. Nivel organizacional maximo en el juego. Contiene pelotones. |
+| **Peloton** | Agrupamiento intermedio de escuadras bajo un mando L3 (Sargento). Nivel entre Seccion y Escuadra. |
+| **Escuadra** | Unidad organizacional leaf. Ocupa un unico hex. Es la entidad que computa el combate. |
+| **L1–L5** | Niveles jerarquicos de la fuerza militar. L1 = tropa basica (soldado). L5 = mando de peloton (Teniente). L3, L4 y L5 portan radio de 5 hex. L2 y L1 no portan radio. Ver ADR-001-01. |
+| **Tropa** | Entidad individual de combate. Nivel L1 a L5, con faction, compatible_squads y equipment. La unidad atomica de la fuerza. |
+| **Grupo** | Agrupacion interna de 2 a 5 Tropas dentro de una Escuadra. Liderada por un L2. No es una entidad de combate; es una unidad de organizacion. |
+
+| **E-UHF** | Variante encriptada de UHF usada por ambas facciones para comunicacion tactica. Alcance 500 m (5 hex). Solo L3 a L5 la portan. Ver manual de Comunicaciones. |
+| **Fin de los Secretos** | Evento historico del universo SyV que volvio irreversible la transparencia de las comunicaciones. Razon por la que L1/L2 no portan radio personal. |
+
+Los grados militares especificos de cada faccion (rangos de Confederacion y Los Rojos) se documentan en ADR-001-01.
 
 ## Consecuencias
 

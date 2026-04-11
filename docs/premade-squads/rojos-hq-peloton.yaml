@@ -1,0 +1,35 @@
+squad:
+  id: "rojos-hq-peloton"
+  name: "Mando de Pelotón Che Guevara"
+  type: command
+  faction: rojos
+  squad_level: 5
+  special_rules: false
+  cost: 110
+
+  leader:
+    rank: "Teniente"
+    level: 5
+    function: "Mando de Pelotón, coordinación política y táctica"
+    has_radio: true
+
+  groups: []
+
+  direct_members:
+    - rank: "Sargento de Primera"
+      level: 4
+      function: "Subjefe de Pelotón, enlace con escuadras"
+      has_radio: true
+    - rank: "Cabo"
+      level: 2
+      function: "Comunicaciones, operador de radio"
+      has_radio: true
+    - rank: "Soldado"
+      level: 1
+      function: "Escolta del mando"
+    - rank: "Soldado"
+      level: 1
+      function: "Escolta del mando"
+    - rank: "Soldado"
+      level: 1
+      function: "Escolta del mando"

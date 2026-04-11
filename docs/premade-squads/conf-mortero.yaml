@@ -1,0 +1,27 @@
+squad:
+  id: "conf-mortero"
+  name: "Pieza de Mortero Mitre"
+  type: mortars
+  faction: confederacion
+  squad_level: 3
+  special_rules: false
+  cost: 95
+
+  leader:
+    rank: "Sargento"
+    level: 3
+    function: "Jefe de pieza, cálculo de tiro y corrección"
+    has_radio: true
+
+  groups: []
+
+  direct_members:
+    - rank: "Artillero"
+      level: 1
+      function: "Apuntador, opera la mira"
+    - rank: "Artillero"
+      level: 1
+      function: "Cargador, introduce el proyectil"
+    - rank: "Artillero"
+      level: 1
+      function: "Municionero, transporte y seguridad de cargas"

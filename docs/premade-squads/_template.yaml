@@ -1,0 +1,18 @@
+# Template de escuadra premade
+# Cada archivo define una escuadra lista para usar.
+# El jugador compone su sección eligiendo escuadras dentro de un presupuesto.
+
+squad:
+  id: ""
+  name: ""
+  type: ""                  # infantry | recon | mortars | engineers | command
+  faction: ""               # confederacion | rojos
+  cost: 0                   # puntos totales de esta composición
+
+  members:
+    - rank: ""              # teniente_primero | sargento_primero | sargento | cabo_primero | cabo | soldado | capellan | monsenor
+      role: ""              # L1 | L2 | L3 | L4
+      function: ""          # descripción libre de su función
+      cost: 0
+      required: true        # solo se explicita cuando es true
+      has_radio: true        # solo se explicita cuando es true — si ningún miembro tiene radio, la escuadra entra en disband

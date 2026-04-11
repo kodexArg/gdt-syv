@@ -1,0 +1,19 @@
+squad:
+  id: "conf-recon-01"
+  name: "Escuadra de Reconocimiento Güemes"
+  type: recon
+  faction: confederacion
+  cost: 50
+
+  members:
+    - rank: cabo
+      role: L2
+      function: "Observador, guía por radio"
+      cost: 22
+      required: true
+      has_radio: true
+
+    - rank: soldado
+      role: L1
+      function: "Francotirador, tiro de precisión"
+      cost: 28
