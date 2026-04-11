@@ -9,10 +9,17 @@ lang: es
 
 ## El pool de órdenes
 
-El Comandante tiene un número limitado de órdenes por turno, determinado por los oficiales vivos en el campo y sus propias habilidades. Si un oficial cae, se pierden las órdenes que canalizaba. El pool puede cambiar durante la partida.
+El Comandante tiene un número limitado de órdenes por turno, determinado por los oficiales vivos y conectados en el campo. **Cada oficial contribuye órdenes al pool según su rango**. Si un oficial cae o se desconecta de la cadena de mando, se pierden inmediatamente las órdenes que canalizaba. El pool es dinámico y puede cambiar durante la partida.
 
-<!-- Pendiente: fórmula exacta del pool
-     (cuántas órdenes aporta L1, cuántas L2) -->
+### Contribución por rango
+
+Cada oficial "conectado" (dentro del alcance de la cadena de mando) aporta un número de órdenes que depende de su rango jerárquico:
+
+- **L5** — aporta [Pendiente de definir] órdenes
+- **L4** — aporta [Pendiente de definir] órdenes  
+- **L3** — aporta [Pendiente de definir] órdenes
+
+Un oficial desconectado no contribuye, aunque siga vivo en el tablero. Restaurar la conexión (reacercarse) restaura su aporte.
 
 ## Tipos de orden
 
@@ -34,6 +41,19 @@ Dirigidas a un oficial. El oficial interpreta la directiva y coordina sus unidad
 <!-- Pendiente: lista de órdenes genéricas disponibles
      ("Ataque a toda costa", "Mantenga posición", etc.)
      y cómo el sistema las resuelve -->
+
+## Comportamiento sin orden
+
+Cuando una unidad no recibe orden en un turno, **no entra en "espera pasiva"**. En su lugar, ejecuta un comportamiento contextual que depende de su último estado:
+
+- **Si estaba DEFENDIENDO** → continúa defendiendo (estado pasivo persiste)
+- **Si estaba MOVIENDO** → se detiene en el hex actual (movimiento requiere orden activa)
+- **Si estaba ATACANDO** → cesa el ataque (ataque requiere orden activa)
+
+En otras palabras: los estados defensivos/pasivos persisten sin órdenes frescas, pero los estados activos/ofensivos se extinguen.
+
+<!-- Pendiente: comportamiento exacto por estado de unidad
+     (¿qué hace una unidad que no estaba en ninguno de estos tres?) -->
 
 ## Transmisión por radio
 
