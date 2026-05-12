@@ -8,6 +8,10 @@ Está íntegramente programado en Godot.
 - **Renderer**: GL Compatibility
 - **Binary**: `~/.local/bin/godot`
 
+## Formato de tablas y salida tabulada
+
+Ancho máximo de línea para tablas Markdown y bloques tabulados: **75 caracteres** (terminal 80 − 5 de margen). Aplica a este archivo, `docs/` y cualquier salida que Claude genere en este proyecto. Si una fila excede, partir el contenido en varias filas, abreviar, o reemplazar la tabla por una lista.
+
 ## Decisiones arquitectónicas (ADR)
 
 Documentación completa en `docs/adr/`. Resumen:
