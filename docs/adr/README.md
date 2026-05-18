@@ -17,3 +17,5 @@ Cada ADR captura una unica decision arquitectonica con su contexto, consecuencia
 | [006](006-transporte-enet-a-steam.md) | Transporte — ENet a Steam Networking Sockets | Aceptado |
 | [007](007-listen-server-prototipado.md) | Listen server como modelo de prototipado | Aceptado |
 | [008](008-estructura-del-proyecto.md) | Estructura del proyecto | Aceptado |
+| [009](009-modelo-de-datos-fuerza-militar.md) | Modelo de datos — Fuerza militar | Aceptado |
+| [010](010-contrato-de-protocolo-de-red.md) | Contrato de protocolo de red client ↔ server | Aceptado |
