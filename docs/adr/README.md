@@ -26,3 +26,4 @@ Cada ADR captura una unica decision arquitectonica con su contexto, consecuencia
 | [014](014-escenario-presupuesto-despliegue-victoria.md) | Escenario, presupuesto, despliegue y victoria | Aceptado |
 | [015](015-mando-comunicaciones-y-triangulacion.md) | Mando, comunicaciones y triangulacion — cierre del eje tactico | Aceptado |
 | [016](016-terreno-elevacion-y-puntos-de-movimiento.md) | Terreno, elevacion y puntos de movimiento | Aceptado |
+| [022](022-escuadras-especiales-l2-caballeria-zapadores-cabo-rojo.md) | Escuadras especiales L2 — caballeria, zapadores, Cabo Rojo y reasignacion de orden generica | Aceptado |
