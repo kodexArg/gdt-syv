@@ -124,7 +124,7 @@ Atributos computados:
 | `strength` | Suma del nivel de cada tropa viva <!-- fórmula exacta pendiente --> |
 | `moral` | Agregado de moral individual <!-- pendiente --> |
 | `has_radio` | `true` si al menos una tropa viva porta radio |
-| `in_command` | BFS desde HQ, distancia Manhattan ≤ 5 por hop (ver [Mando y Subordinación](08-mando-y-subordinacion.md)) |
+| `in_command` | BFS desde HQ, distancia hex ≤ 5 por hop (ver [Mando y Subordinación](08-mando-y-subordinacion.md)) |
 
 #### Escuadra estándar (L3)
 

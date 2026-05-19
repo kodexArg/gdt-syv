@@ -301,7 +301,7 @@ En cada **Orders**, el Comandante decide, dentro de su pool limitado:
   Más delegación = más alcance con menos pool, pero menos control y riesgo de mala
   interpretación. Este es el dilema central, turno a turno.
 - **Cómo sostener la cadena de mando.** Una escuadra está *en mando* si está a ≤5
-  hexes (Manhattan) del HQ de Pelotón **o** de cualquier otra escuadra ya en mando
+  hexes del HQ de Pelotón **o** de cualquier otra escuadra ya en mando
   —es un flood-fill hop a hop desde el HQ; cada escuadra en rango es repetidora
   involuntaria—. El jugador no asigna roles de relay: la topología se recalcula
   tras cada turno. Por eso una decisión posicional clave es no solo acercar tropas

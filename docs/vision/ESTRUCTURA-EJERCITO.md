@@ -139,7 +139,7 @@ la escuadra con órdenes genéricas y reglas propias.
 
 ### 2.3 Cadena de mando y regla del radio de 5 hex
 
-Una escuadra está **en mando** si está a ≤ 5 hex (Manhattan) del HQ de Pelotón
+Una escuadra está **en mando** si está a ≤ 5 hex del HQ de Pelotón
 **o** de otra escuadra ya en mando: es un *flood-fill* hop a hop. Cada escuadra
 intermedia es **relay involuntario**.
 
