@@ -7,6 +7,15 @@ lang: es
 
 # Escala y Distancias
 
+## Coordenadas y métrica
+
+Las distancias de esta página se expresan en **hexes** usando la
+**distancia hexagonal** (pasos mínimos entre adyacentes). El sistema
+de coordenadas canónico es axial `(q, r)`. Ver
+[ADR-023](../adr/023-modelo-espacial-coordenadas-y-distancia.md)
+para la fórmula exacta, la tabla de vecinos y la definición de
+granularidad de unidad.
+
 ## El hexágono como unidad de medida
 
 Cada hexágono del tablero representa **100 metros de diámetro**. Esta medida define todo

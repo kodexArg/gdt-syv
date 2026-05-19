@@ -28,6 +28,17 @@ El campo de batalla es una grilla de hexágonos con orientación flat-top y radi
 
 **Escala**: cada hexágono representa **100 metros de diámetro**. La grilla cubre aproximadamente 4 km de extremo a extremo. Ver [Escala y Distancias](02b-distancias.md) para la tabla completa de conversión.
 
+## Sistema de coordenadas
+
+Cada hex se identifica con un par de enteros `(q, r)` en el sistema
+**axial** (flat-top). El origen `(0, 0)` es el hex central. La
+distancia entre dos hexes es la **distancia hexagonal** (pasos mínimos
+entre adyacentes), no la distancia Manhattan.
+
+La especificación completa — vecinos, fórmula de distancia,
+coordenadas cúbicas derivadas y granularidad de unidad — está en
+[ADR-023](../adr/023-modelo-espacial-coordenadas-y-distancia.md).
+
 ## Terreno
 
 Cada hex tiene un tipo de terreno que define si es transitable y cómo afecta a las unidades que lo ocupan. Actualmente existen dos tipos:

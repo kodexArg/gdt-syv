@@ -32,3 +32,4 @@ Cada ADR captura una unica decision arquitectonica con su contexto, consecuencia
 | [020](020-formula-de-revelacion-y-niebla-de-guerra.md) | Formula de revelacion y niebla de guerra | Aceptado |
 | [021](021-agregacion-de-escuadra-heridas-por-zona-y-schema-de-equipment.md) | Agregacion de escuadra, heridas por zona y schema de Equipment | Aceptado |
 | [022](022-escuadras-especiales-l2-caballeria-zapadores-cabo-rojo.md) | Escuadras especiales L2 — caballeria, zapadores, Cabo Rojo | Aceptado |
+| [023](023-modelo-espacial-coordenadas-y-distancia.md) | Modelo espacial — coordenadas y distancia | Aceptado |
