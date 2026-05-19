@@ -98,7 +98,7 @@ Computed:
 strength   = sum(tropa.level para tropa.alive)  # formula exacta pendiente
 moral      = aggregate(tropa.moral)             # pendiente
 has_radio  = any(tropa.has_radio and tropa.alive)
-in_command = (ver ADR-008 BFS desde HQ, distancia Manhattan <= 5 por hop)
+in_command = (ver ADR-008 BFS desde HQ, distancia de hex <= 5 por hop)
 ```
 
 **Escuadra estandar (L3)**: liderada por un Sargento (L3) con radio. Tiene grupos internos

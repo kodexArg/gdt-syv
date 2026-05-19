@@ -23,7 +23,7 @@ Romper un eslabón tiene consecuencias para todo lo que hay detrás.
 
 ## La regla de los 5 hexes encadenada
 
-Una escuadra está **en mando** si se encuentra a 5 hexes o menos (distancia Manhattan) del HQ de Pelotón, **o** a 5 hexes o menos de cualquier otra escuadra que ya esté en mando.
+Una escuadra está **en mando** si se encuentra a 5 hexes o menos (distancia de hex — pasos mínimos en la grilla hexagonal) del HQ de Pelotón, **o** a 5 hexes o menos de cualquier otra escuadra que ya esté en mando.
 
 Esto es un flood-fill desde el HQ: la red de mando se expande hop a hop. Cada escuadra dentro del radio actúa como repetidora para las que están detrás de ella.
 
