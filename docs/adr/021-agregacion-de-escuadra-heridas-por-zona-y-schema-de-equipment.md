@@ -114,24 +114,20 @@ transitorios de Valor del cap. 09).
 > `moral(S)` es un **insumo** que ese mecanismo consumira; este ADR solo
 > garantiza que el insumo exista y sea determinista.
 
-```
-moral(S) = clamp(
-             round(  0.5 · VAL_ef(lider_operativo)
-                    + 0.5 · media( VAL_ef(t) : t ∈ S, t.alive, t ≠ lider ) ),
-             1, 100 )
-```
+> **Formula canonica: ADR-017.** La agregacion de `moral(S)` fue cerrada por
+> [ADR-017](017-degradacion-recuperacion-y-umbrales-de-valor.md) §3 (decision
+> #17 del grupo de Valor) como **promedio ponderado por `level`**:
+> `moral(S) = Σ(level·VAL_ef) / Σ level` sobre tropas vivas. Esa es la unica
+> formula normativa. ADR-021 **no** define una formula propia: solo registra
+> que `moral(S)` es un campo *computed* determinista que el resto del modelo
+> (`strength`, heridas, Equipment) puede asumir como existente. Cualquier
+> referencia previa a una mezcla 0.5/0.5 queda **derogada** en favor de la
+> ponderacion por `level` de ADR-017 (coherente con la escala de cohesion
+> `strength` definida en §1 de este mismo ADR).
 
-- `lider_operativo`: el L3 en escuadra estandar, el L2 en escuadra especial
-  (misma definicion de "lider operativo" que ADR-012 §2.1; si murio, pasa a la
-  tropa viva de mayor `level`, empates por menor `id` — desempate determinista
-  consistente con ADR-012 §5.4).
-- **Ponderacion lider/tropa 0.5 / 0.5**: la moral colectiva depende tanto del
-  temple del mando como de la masa de la tropa. Es una ponderacion mas suave
-  que la de iniciativa (ADR-012 §2.1 usa `1 + 0.25·media`) **a proposito**: la
-  iniciativa modela "capacidad de mando para hacer reaccionar"; la moral modela
-  cohesion del conjunto, donde la tropa pesa tanto como el lider. **Supuesto de
-  balance, sujeto a playtest**; la estructura estable es "combinacion convexa
-  de VAL del lider y media VAL del resto, sobre vivos, con clamp".
+- `lider_operativo` y los casos borde (sin tropas distintas del lider, escuadra
+  sin vivos → `moral(S)=0`) se resuelven segun ADR-017 §3; este ADR no los
+  redefine.
 - Si no hay tropas distintas del lider vivas, `moral(S) = VAL_ef(lider)`.
   Escuadra sin vivos → `moral(S) = 0` (no participa; coherente con
   `ELIMINATED`).

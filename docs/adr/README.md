@@ -27,3 +27,8 @@ Cada ADR captura una unica decision arquitectonica con su contexto, consecuencia
 | [015](015-mando-comunicaciones-y-triangulacion.md) | Mando, comunicaciones y triangulacion — cierre del eje tactico | Aceptado |
 | [016](016-terreno-elevacion-y-puntos-de-movimiento.md) | Terreno, elevacion y puntos de movimiento | Aceptado |
 | [017](017-degradacion-recuperacion-y-umbrales-de-valor.md) | Degradacion, recuperacion y umbrales de Valor | Aceptado |
+| [018](018-pool-de-ordenes-genericas-y-comportamiento-de-unidad.md) | Pool de ordenes, genericas y comportamiento de unidad | Aceptado |
+| [019](019-secuencia-de-resolucion-deteccion-y-designacion-de-objetivos.md) | Secuencia de resolucion, deteccion y designacion de objetivos | Aceptado |
+| [020](020-formula-de-revelacion-y-niebla-de-guerra.md) | Formula de revelacion y niebla de guerra | Aceptado |
+| [021](021-agregacion-de-escuadra-heridas-por-zona-y-schema-de-equipment.md) | Agregacion de escuadra, heridas por zona y schema de Equipment | Aceptado |
+| [022](022-escuadras-especiales-l2-caballeria-zapadores-cabo-rojo.md) | Escuadras especiales L2 — caballeria, zapadores, Cabo Rojo | Aceptado |
