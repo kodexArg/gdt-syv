@@ -26,3 +26,4 @@ Cada ADR captura una unica decision arquitectonica con su contexto, consecuencia
 | [014](014-escenario-presupuesto-despliegue-victoria.md) | Escenario, presupuesto, despliegue y victoria | Aceptado |
 | [015](015-mando-comunicaciones-y-triangulacion.md) | Mando, comunicaciones y triangulacion — cierre del eje tactico | Aceptado |
 | [016](016-terreno-elevacion-y-puntos-de-movimiento.md) | Terreno, elevacion y puntos de movimiento | Aceptado |
+| [021](021-agregacion-de-escuadra-heridas-por-zona-y-schema-de-equipment.md) | Agregacion de escuadra, reparto de heridas por zona y schema de Equipment | Aceptado |
