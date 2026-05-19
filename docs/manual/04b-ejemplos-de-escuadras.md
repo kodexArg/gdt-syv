@@ -30,7 +30,9 @@ La escuadra de infantería es la columna vertebral de la Confederación. Versát
 | Soldado × 3 | L1 | Miembros del Grupo Scout (incluye un sniper y un oteador) |
 | Comunicaciones | L1 | Porta radio global; amplifica el rango del Sargento |
 
-**Total:** 14 tropas. Dos grupos internos bajo dos L2.
+**Total:** 15 tropas. Dos grupos internos bajo dos L2; la Tropa de Comunicaciones como miembro directo bajo el Sargento.
+
+> **Nota reconciliación #62 (2026-05-18):** La Tropa de Comunicaciones estaba listada en esta tabla pero ausente en `conf-infanteria-estandar.yaml`. Se añadió al YAML como `direct_member` L1 bajo el Sargento. El total pasa de 14 a 15.
 
 ### Mecánica en juego
 
@@ -42,7 +44,9 @@ El Grupo de Fuego concentra potencia de fuego directa; el Grupo Scout aporta cap
 
 #### Nota sobre Sanitarios
 
-Si la escuadra incluye un Sanitario (role especial, **Pendiente de definir** su nivel y lugar en la composición), este puede **estabilizar** soldados heridos durante el combate o entre turnos. Un Sanitario **no cura heridas** — es decir, no remueve los modificadores negativos acumulados. Su rol es **prevenir que empeoren**: mantiene a un soldado herido en su estado actual, evitando complicaciones que lo acercarían al umbral de eliminación. Este enfoque refuerza el tema de atrito: el daño es permanente, y la supervivencia depende de presión táctica sostenida, no de recuperación mágica.
+> **Decisión #63 (2026-05-18):** Nivel definido como **L1**; lugar: **miembro directo** de la escuadra, fuera de grupo, bajo el Sargento — igual que la Tropa de Comunicaciones. Coherente con ADR-009 (L1 = tropa básica sin autoridad de mando) y con `conf-sanitarios.yaml` donde los Médicos son L1. El Sanitario no lidera ni organiza sub-grupos; su rol es exclusivamente de soporte.
+
+Si la escuadra incluye un Sanitario (tropa opcional, **L1**, miembro directo bajo el Sargento), este puede **estabilizar** soldados heridos durante el combate o entre turnos. Un Sanitario **no cura heridas** — es decir, no remueve los modificadores negativos acumulados. Su rol es **prevenir que empeoren**: mantiene a un soldado herido en su estado actual, evitando complicaciones que lo acercarían al umbral de eliminación. Este enfoque refuerza el tema de atrito: el daño es permanente, y la supervivencia depende de presión táctica sostenida, no de recuperación mágica.
 
 ### Bajas clave
 

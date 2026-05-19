@@ -49,4 +49,11 @@ squad:
           function: "Fusilero de protección"
           cantidad: 2
 
-  direct_members: []
+  direct_members:
+    # Decisión #62 (2026-05-18): la Tropa de Comunicaciones se incluye como miembro directo
+    # de la escuadra (fuera de grupo), bajo el Sargento. Es L1 con radio global según ADR-009.
+    # El manual/04b ya la listaba en la composición; el YAML la omitía — discrepancia cerrada.
+    - rank: "Soldado de Comunicaciones"
+      level: 1
+      function: "Porta radio global; amplifica el rango del Sargento en la cadena de mando"
+      has_radio_global: true
