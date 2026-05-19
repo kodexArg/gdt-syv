@@ -8,6 +8,17 @@ Format: [Semantic Versioning](https://semver.org/) — `MAJOR.MINOR.PATCH`
 
 ## [Unreleased]
 
+- group: spatial-model-specification
+  priority: critical
+  commit: e5e39cc
+  changes:
+    - feat(adr): ADR-023 modelo espacial, coordenadas hexagonales (q,r axial) y distancia
+    - docs(adr): actualizar README.md con entrada ADR-023
+    - docs(manual): agregar subsección Sistema de coordenadas en 02-campo-de-batalla.md
+    - docs(manual): crear 02b-distancias.md con fórmulas de métrica hexagonal
+    - fix(docs): corregir "distancia Manhattan" → "distancia de hex" (terminología correcta para grilla hexagonal)
+    - docs: reconciliar referencias cruzadas en 08-mando-y-subordinacion.md, ADR-009, 04-unidades.md, VISION-GENERAL.md, ESTRUCTURA-EJERCITO.md
+
 ## [0.1.0] - 2026-05-18
 
 - group: adr-batch-013-022-design-closure
