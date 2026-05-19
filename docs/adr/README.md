@@ -22,3 +22,4 @@ Cada ADR captura una unica decision arquitectonica con su contexto, consecuencia
 | [010](010-contrato-de-protocolo-de-red.md) | Contrato de protocolo de red client ↔ server | Aceptado |
 | [011](011-resolucion-de-combate-por-soldado.md) | Resolucion de combate estocastica por soldado | Aceptado |
 | [012](012-calculo-de-iniciativa-orden-de-resolucion.md) | Calculo de iniciativa — orden de resolucion | Aceptado |
+| [013](013-stats-canonicos-y-catalogo-de-modificadores.md) | Stats canonicos y catalogo de modificadores | Aceptado |
