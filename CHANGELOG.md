@@ -8,6 +8,15 @@ Format: [Semantic Versioning](https://semver.org/) — `MAJOR.MINOR.PATCH`
 
 ## [Unreleased]
 
+- group: manual-integration-ficha-personaje
+  priority: medium
+  commit: aaa0cdd
+  changes:
+    - docs(manual): integrate character sheet (ficha-de-personaje) as docs/manual/04c-ficha-de-personaje.md
+    - docs(manual): update 00-index.md with new section ordering (added item 8, renumbered 9–17)
+    - chore(docs): remove empty docs/templates/ directory (ficha-de-personaje relocated to manual)
+    - docs(manual): reframe ficha-de-personaje as manual asset, not ADR template reference
+
 - group: procedural-map-generation-mvp
   priority: critical
   commit: 6c9ec3c
