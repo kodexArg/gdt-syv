@@ -40,6 +40,7 @@ Se adopta la siguiente terminologia como vocabulario canonico del proyecto. Todo
 | **Fin de los Secretos** | Evento historico del universo SyV que volvio irreversible la transparencia de las comunicaciones. Razon por la que L1/L2 no portan radio personal. |
 | **Confederación Argentina** | Facción norte. Ejército regular del estado teocrático-militar. Estructura jerárquica formal heredada del Ejército Argentino con presencia eclesiástica integrada en la cadena de mando. Nombre corto de juego: "La Confederación". ID en código y YAML: `confederacion`. |
 | **Los Rojos** | Facción sur. Movimiento de resistencia de raíz comunista-patriótica con estructura más horizontal. Incluye el cuerpo especial "Los Infernales" — caballería irregular con nomenclatura gaucha. ID en código y YAML: `rojos`. |
+| **Invariante de bandos** | Azul = izquierda (q mínimo) / Rojo = derecha (q máximo). HQ Azul fijo en `(-20, 10)`; HQ Rojo fijo en `(20, -10)`. Eje de simetría = columna q=0. Color y lado son posicionales, no elegibles por el jugador. Ver ADR-024. |
 
 Los grados militares especificos de cada faccion (rangos de Confederacion y Los Rojos) se documentan en ADR-001-01.
 

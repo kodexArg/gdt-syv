@@ -33,3 +33,4 @@ Cada ADR captura una unica decision arquitectonica con su contexto, consecuencia
 | [021](021-agregacion-de-escuadra-heridas-por-zona-y-schema-de-equipment.md) | Agregacion de escuadra, heridas por zona y schema de Equipment | Aceptado |
 | [022](022-escuadras-especiales-l2-caballeria-zapadores-cabo-rojo.md) | Escuadras especiales L2 — caballeria, zapadores, Cabo Rojo | Aceptado |
 | [023](023-modelo-espacial-coordenadas-y-distancia.md) | Modelo espacial — coordenadas y distancia | Aceptado |
+| [024](024-generacion-procedural-mapa-mvp.md) | Generacion procedural de mapa MVP | Aceptado |

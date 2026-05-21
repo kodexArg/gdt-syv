@@ -7,20 +7,29 @@ lang: es
 
 # El Campo de Batalla
 
-## Mapas: Escenarios predefinidos
+## Generación procedural de mapa
 
-Cada partida utiliza un **escenario previamente diseñado**. No hay generación procedural de mapas ni editor de mapas (por ahora).
+Cada partida genera su mapa desde una **semilla (seed)** aleatoria.
+No hay escenarios predefinidos ni editor de mapas en el MVP.
+La semilla se registra en la partida para reproducibilidad y replay.
 
-El escenario define:
-- Diseño del tablero: distribución de terreno, agua, elevación
-- Hexes objetivos y sus puntos de victoria
-- Zonas de despliegue por facción
-- Límite de turnos para la partida
-- Presupuesto de puntos de despliegue por facción
+El generador produce un tablero válido siguiendo estos pasos:
 
-**Implicación táctica:** Toda la balance del juego es manual. Cada mapa se ajusta a mano para garantizar que ambas facciones tengan oportunidades simétricas de victoria según sus fuerzas.
+1. Marca `(0, 0)` como impasable.
+2. Siembra el **ombligo** — un blob impasable centrado en `(0, 0)` de
+   tipo aleatorio (`LAGUNA` o `MONTAÑA`) y radio aleatorio.
+3. Aplica la **cintura** — densidad probabilística de obstáculos que
+   crece hacia el centro (`q = 0`) y se reduce a cero en los bordes.
+4. Verifica conectividad HQ Azul ↔ HQ Rojo con A*. Si no hay camino,
+   incrementa la semilla y regenera.
 
-**Formato de escenario:** Pendiente de definir (estructura, serialización, validación)
+La asimetría táctica emerge de la cintura y el ombligo asimétricos,
+más las posiciones de piezas independientes por bando.
+
+La especificación completa — invariantes geométricos, invariante de
+bandos, HQ como pieza-unidad, lifecycle de partida, asientos,
+aleatoriedad permitida, contrato A* y parámetros tunables — está en
+[ADR-024](../adr/024-generacion-procedural-mapa-mvp.md).
 
 ## La grilla hexagonal
 
