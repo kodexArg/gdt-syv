@@ -1,20 +1,20 @@
 ---
 title: "Ficha de Personaje (PJ) — Schema canónico"
-order: 0
-section: templates
+order: 43
+section: units
 lang: es
 ---
 
 # Ficha de Personaje (PJ) — Schema canónico
 
-Fuente de verdad estructural de una **Tropa** (PJ, unidad atómica del
-juego; ver [04 — Unidades](../manual/04-unidades.md)). Define qué campos
-tiene un soldado, su tipo, rango y de dónde sale cada valor. Es la
-template a la que apunta el ADR de ficha de personaje.
+Anexo del manual que especifica la ficha del soldado individual.
+Fuente de verdad estructural de una **Tropa** (PJ, unidad atómica
+del juego; ver [04 — Unidades](04-unidades.md)). Define qué campos
+tiene un soldado, su tipo, rango y de dónde sale cada valor.
 
 No reabre los stats de combate: los 6 stats de
-[ADR-013](../adr/013-stats-canonicos-y-catalogo-de-modificadores.md) se
-adoptan tal cual y se suma un 7º stat (`VIG`, ver §2).
+[ADR-013](../adr/013-stats-canonicos-y-catalogo-de-modificadores.md)
+se adoptan tal cual y se suma un 7º stat (`VIG`, ver §2).
 
 Convención de fuente (de dónde sale cada campo):
 
