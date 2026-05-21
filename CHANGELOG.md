@@ -8,16 +8,20 @@ Format: [Semantic Versioning](https://semver.org/) — `MAJOR.MINOR.PATCH`
 
 ## [Unreleased]
 
-- group: spatial-model-specification
+- group: procedural-map-generation-mvp
   priority: critical
-  commit: e5e39cc
+  commit: 6c9ec3c
   changes:
-    - feat(adr): ADR-023 modelo espacial, coordenadas hexagonales (q,r axial) y distancia
-    - docs(adr): actualizar README.md con entrada ADR-023
-    - docs(manual): agregar subsección Sistema de coordenadas en 02-campo-de-batalla.md
-    - docs(manual): crear 02b-distancias.md con fórmulas de métrica hexagonal
-    - fix(docs): corregir "distancia Manhattan" → "distancia de hex" (terminología correcta para grilla hexagonal)
-    - docs: reconciliar referencias cruzadas en 08-mando-y-subordinacion.md, ADR-009, 04-unidades.md, VISION-GENERAL.md, ESTRUCTURA-EJERCITO.md
+    - feat(adr): ADR-024 generación procedural mapa MVP — invariantes geométricos y de bandos
+    - feat(adr): ADR-024 ombligo blob hex (aleatorio laguna/montaña, radio [2,5]), cintura probabilística
+    - feat(adr): ADR-024 invariante bandos (Azul q≤-15, Rojo q≥15, HQ (-20,10) y (20,-10), espejo (q,r)→(-q,q+r))
+    - feat(adr): ADR-024 HQ como pieza-unidad móvil (MOVE/ATTACK/DEFEND), destrucción = victoria automática
+    - feat(adr): ADR-024 lifecycle MVP determinístico (seed → A* assert → colocación piezas server-side)
+    - feat(adr): ADR-024 composición simétrica MVP (1 HQ + 3 Inf L3 por bando), distribución aleatoria independiente
+    - feat(adr): ADR-024 A* canónico con orden vecinos ADR-023, desempate determinista, seed++/regen en raro
+    - docs(adr): ADR-001 entrada nueva "invariante de bandos"
+    - docs(adr): README.md entrada ADR-024 agregada al índice
+    - docs(manual): sección "Generación procedural de mapa" en 02-campo-de-batalla.md referenciando ADR-024
 
 ## [0.1.0] - 2026-05-18
 
