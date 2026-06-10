@@ -1,0 +1,20 @@
+squad:
+  id: "conf-recon"
+  name: "Pareja de Reconocimiento Lavalle"
+  type: recon
+  faction: confederacion
+  squad_level: 2
+  special_rules: true
+  cost: 55
+
+  leader:
+    rank: "Cabo Primero"
+    level: 2
+    function: "Oteador, guía de infiltración"
+
+  groups: []
+
+  direct_members:
+    - rank: "Soldado"
+      level: 1
+      function: "Francotirador, tiro de precisión"

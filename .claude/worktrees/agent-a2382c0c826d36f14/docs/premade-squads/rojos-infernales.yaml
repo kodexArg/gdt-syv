@@ -1,0 +1,33 @@
+squad:
+  id: "rojos-infernales"
+  name: "Los Infernales"
+  type: cavalry
+  faction: rojos
+  squad_level: 2
+  special_rules: true
+  cost: 150
+
+  leader:
+    rank: "Jefe de Partida"
+    level: 2
+    function: "Mando de la partida, golpe de mano"
+
+  groups: []
+
+  direct_members:
+    - rank: "Baqueano"
+      level: 2
+      function: "Guía de terreno, reconocimiento montado"
+      compatible_squads: ["rojos-infernales"]
+    - rank: "Jinete"
+      level: 1
+      function: "Combate montado, exploración"
+      compatible_squads: ["rojos-infernales"]
+    - rank: "Jinete"
+      level: 1
+      function: "Combate montado, exploración"
+      compatible_squads: ["rojos-infernales"]
+    - rank: "Jinete"
+      level: 1
+      function: "Combate montado, exploración"
+      compatible_squads: ["rojos-infernales"]

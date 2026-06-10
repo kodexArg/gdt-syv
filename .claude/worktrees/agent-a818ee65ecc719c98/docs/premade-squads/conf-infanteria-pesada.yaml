@@ -1,0 +1,54 @@
+squad:
+  id: "conf-infanteria-pesada"
+  name: "Escuadra de Infantería Pesada Belgrano"
+  type: infantry
+  faction: confederacion
+  squad_level: 3
+  special_rules: false
+  cost: 230
+
+  leader:
+    rank: "Sargento"
+    level: 3
+    function: "Jefe de Escuadra"
+    has_radio: true
+
+  groups:
+    - name: "Grupo de Fuego"
+      leader:
+        rank: "Cabo Primero"
+        level: 2
+        function: "Subjefe de Infantería, líder del asalto"
+      members:
+        - rank: "Cabo"
+          level: 2
+          function: "Jefe de Fuego, ametralladora MAG"
+        - rank: "Soldado"
+          level: 1
+          function: "Apuntador MAG"
+          cantidad: 1
+        - rank: "Soldado"
+          level: 1
+          function: "Fusilero de asalto"
+          cantidad: 4
+
+    - name: "Grupo Arma Pesada"
+      leader:
+        rank: "Cabo Primero"
+        level: 2
+        function: "Jefe de pieza, operador de mortero estático"
+      members:
+        - rank: "Artillero"
+          level: 1
+          function: "Cargador de mortero"
+        - rank: "Artillero"
+          level: 1
+          function: "Municionero, prepara cargas"
+        - rank: "Artillero"
+          level: 1
+          function: "Apuntador, opera mira"
+        - rank: "Soldado"
+          level: 1
+          function: "Seguridad de pieza"
+
+  direct_members: []

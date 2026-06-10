@@ -1,0 +1,44 @@
+squad:
+  id: "rojos-zapadores"
+  name: "Brigada de Zapadores Moncada"
+  type: engineers
+  faction: rojos
+  squad_level: 2
+  special_rules: true
+  cost: 125
+
+  leader:
+    rank: "Sargento de Tercera"
+    level: 2
+    function: "Jefe de brigada de zapadores"
+
+  groups:
+    - name: "Escolta de Brigada"
+      members:
+        - rank: "Soldado"
+          level: 1
+          function: "Guardia de flanco"
+        - rank: "Soldado"
+          level: 1
+          function: "Guardia de retaguardia"
+
+    - name: "Equipo de Ingenieros"
+      members:
+        - rank: "Soldado"
+          level: 1
+          function: "Ingeniero zapador, demoliciones"
+          compatible_squads: ["rojos-zapadores"]
+        - rank: "Soldado"
+          level: 1
+          function: "Ingeniero zapador, minado de territorio"
+          compatible_squads: ["rojos-zapadores"]
+        - rank: "Soldado"
+          level: 1
+          function: "Ingeniero zapador, obstáculos y trampas"
+          compatible_squads: ["rojos-zapadores"]
+        - rank: "Soldado"
+          level: 1
+          function: "Ingeniero zapador, reconocimiento de ingeniería"
+          compatible_squads: ["rojos-zapadores"]
+
+  direct_members: []

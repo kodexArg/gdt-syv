@@ -1,0 +1,30 @@
+squad:
+  id: "conf-artilleros-01"
+  name: "Artilleros Saavedra"
+  faction: confederacion
+  type: mortars
+  squad_level: 3
+  special_rules: false
+  cost: 100
+
+  leader:
+    rank: "Sargento"
+    level: 3
+    function: "Jefe de pieza, cálculo de tiro, corrección"
+    has_radio: true
+
+  groups: []
+
+  direct_members:
+    - rank: "Cabo"
+      level: 2
+      function: "Apuntador, opera la mira"
+    - rank: "Soldado"
+      level: 1
+      function: "Cargador, introduce proyectil"
+    - rank: "Soldado"
+      level: 1
+      function: "Municionero, prepara y alcanza proyectiles"
+    - rank: "Soldado"
+      level: 1
+      function: "Municionero, transporte y seguridad"

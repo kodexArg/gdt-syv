@@ -1,0 +1,39 @@
+squad:
+  id: "conf-infanteria-02"
+  name: "Escuadra de Fuego Belgrano"
+  faction: confederacion
+  type: infantry
+  squad_level: 3
+  special_rules: false
+  cost: 100
+
+  leader:
+    rank: "Sargento"
+    level: 3
+    function: "Mando de escuadra"
+    has_radio: true
+
+  groups: []
+
+  direct_members:
+    - rank: "Cabo"
+      level: 2
+      function: "Segundo al mando, retaguardia de escuadra"
+    - rank: "Cabo Primero"
+      level: 2
+      function: "Artillero superior, coordinación de fuego"
+    - rank: "Soldado"
+      level: 1
+      function: "Supresión, ametralladora"
+    - rank: "Soldado"
+      level: 1
+      function: "Asistente de ametralladora, munición"
+    - rank: "Soldado"
+      level: 1
+      function: "Combate directo"
+    - rank: "Soldado"
+      level: 1
+      function: "Combate directo"
+    - rank: "Capellan"
+      level: 1
+      function: "Sanidad y moral"

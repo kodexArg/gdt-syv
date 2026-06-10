@@ -1,0 +1,44 @@
+squad:
+  id: "conf-zapadores"
+  name: "Sección de Zapadores Güemes"
+  type: engineers
+  faction: confederacion
+  squad_level: 2
+  special_rules: true
+  cost: 130
+
+  leader:
+    rank: "Cabo Primero"
+    level: 2
+    function: "Jefe de sección de zapadores"
+
+  groups:
+    - name: "Equipo de Protección"
+      members:
+        - rank: "Soldado"
+          level: 1
+          function: "Guardia de flanco"
+        - rank: "Soldado"
+          level: 1
+          function: "Guardia de retaguardia"
+
+    - name: "Equipo de Ingenieros"
+      members:
+        - rank: "Soldado"
+          level: 1
+          function: "Ingeniero zapador, demoliciones"
+          compatible_squads: ["conf-zapadores"]
+        - rank: "Soldado"
+          level: 1
+          function: "Ingeniero zapador, minado"
+          compatible_squads: ["conf-zapadores"]
+        - rank: "Soldado"
+          level: 1
+          function: "Ingeniero zapador, obstáculos"
+          compatible_squads: ["conf-zapadores"]
+        - rank: "Soldado"
+          level: 1
+          function: "Ingeniero zapador, reconocimiento de ingeniería"
+          compatible_squads: ["conf-zapadores"]
+
+  direct_members: []

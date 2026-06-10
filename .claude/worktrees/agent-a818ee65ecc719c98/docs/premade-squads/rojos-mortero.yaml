@@ -1,0 +1,27 @@
+squad:
+  id: "rojos-mortero"
+  name: "Pieza de Mortero Ñancahuazú"
+  type: mortars
+  faction: rojos
+  squad_level: 3
+  special_rules: false
+  cost: 90
+
+  leader:
+    rank: "Sargento de Segunda"
+    level: 3
+    function: "Jefe de pieza, cálculo de tiro y corrección"
+    has_radio: true
+
+  groups: []
+
+  direct_members:
+    - rank: "Soldado"
+      level: 1
+      function: "Apuntador, opera la mira"
+    - rank: "Soldado"
+      level: 1
+      function: "Cargador, introduce el proyectil"
+    - rank: "Soldado"
+      level: 1
+      function: "Municionero, transporte y seguridad de cargas"
